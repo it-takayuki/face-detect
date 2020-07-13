@@ -33,13 +33,13 @@
 		function button_callback() {
 			// re-draw the image to clear previous results and get its RGBA pixel data
 			ctx.drawImage(img, 0, 0);
-			var rgba = ctx.getImageData(0, 0, 680, 383).data;
+			var rgba = ctx.getImageData(0, 0, 900, 590).data;
 			// prepare input to `run_cascade`
 			image = {
-				"pixels": rgba_to_grayscale(rgba, 383, 680),
-				"nrows": 383,
-				"ncols": 680,
-				"ldim": 680
+				"pixels": rgba_to_grayscale(rgba, 590, 900),
+				"nrows": 590,
+				"ncols": 900,
+				"ldim": 900
 			}
 			params = {
 				"shiftfactor": 0.1, // move the detection window by 10% of its size
